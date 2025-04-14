@@ -20,6 +20,7 @@ function App() {
   createEffect(() => {
     setExecutedEvents((events) => [
       ...events,
+
       { timestamp: Date.now(), count: count() },
     ]);
   });
