@@ -20,7 +20,7 @@ function App() {
   createEffect(() => {
     setExecutedEvents((events) => [
       ...events,
-      { timestamp: Date.now(), count: count() }
+      { timestamp: Date.now(), count: count() },
     ]);
   });
 
@@ -44,7 +44,7 @@ function App() {
           <ul class="list-disc">
             <For
               each={clickedEvents().toSorted(
-                (a, b) => b.timestamp - a.timestamp
+                (a, b) => b.timestamp - a.timestamp,
               )}
             >
               {(event, _) => <li>{event.timestamp}</li>}
@@ -56,7 +56,7 @@ function App() {
           <ul class="list-disc">
             <For
               each={executedEvents().toSorted(
-                (a, b) => b.timestamp - a.timestamp
+                (a, b) => b.timestamp - a.timestamp,
               )}
             >
               {(event, _) => (
