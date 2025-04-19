@@ -31,7 +31,7 @@ function App() {
     <section class="flex flex-col gap-12 p-4">
       <section class="flex gap-8">
         <button
-          class="bg-gray-200 border border-gray-300 px-2 py-1 rounded cursor-pointer focus-visible:ring"
+          class="cursor-pointer rounded border border-gray-300 bg-gray-200 px-2 py-1 focus-visible:ring"
           onClick={() => {
             setClickedEvents([
               ...clickedEvents(),
