@@ -20,7 +20,10 @@ function App() {
   createEffect(() => {
     setExecutedEvents((events) => [
       ...events,
-      { timestamp: Date.now(), count: count() },
+      {
+        timestamp: Date.now(),
+        count: count(),
+      },
     ]);
   });
 
@@ -30,7 +33,12 @@ function App() {
         <button
           class="bg-gray-200 border border-gray-300 px-2 py-1 rounded cursor-pointer focus-visible:ring"
           onClick={() => {
-            setClickedEvents([...clickedEvents(), { timestamp: Date.now() }]);
+            setClickedEvents([
+              ...clickedEvents(),
+              {
+                timestamp: Date.now(),
+              },
+            ]);
             debouncedSetCount((count) => count + 5);
           }}
         >
