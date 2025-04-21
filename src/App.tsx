@@ -1,5 +1,5 @@
-import { createEffect, createSignal, For } from "solid-js";
 import { debounce } from "./utils/debounce";
+import { createEffect, createSignal, For } from "solid-js";
 
 interface ClickedEvent {
   timestamp: number;
